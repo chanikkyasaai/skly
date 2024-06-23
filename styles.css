@@ -17,7 +17,7 @@
             align-items: center;
             text-align: center;
             overflow-x: hidden;
-            background-image: url('../designs/skly-web/skly-web_1.jpg');
+            background-image: url('skly-web_1.jpg');
         }
 
         .hero {
@@ -36,7 +36,7 @@
 
         @media (max-width: 767px) {
             .body {
-                background-image: url('../designs/skly-mob/skly_1.jpg');
+                background-image: url('skly_1.jpg');
             }
         }
 
