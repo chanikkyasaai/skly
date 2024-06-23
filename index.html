@@ -9,543 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playwrite+MX:wght@100..400&display=swap" rel="stylesheet">
-    <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    </head>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="styles.css">
+</head>
     
     <style>
-.poppins-thin {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.poppins-extralight {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.poppins-light {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.poppins-regular {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.poppins-medium {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.poppins-semibold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.poppins-bold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.poppins-extrabold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.poppins-black {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.poppins-thin-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.poppins-extralight-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: italic;
-}
-
-.poppins-light-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.poppins-regular-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.poppins-medium-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.poppins-semibold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.poppins-bold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.poppins-extrabold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: italic;
-}
-
-.poppins-black-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
-
-
-
-
-        body {
-            font-family: "Poppins", sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            height: 100vh;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            overflow-x: hidden;
-            background-image: url('skly-web_1.jpg');
-        }
-
-        .hero {
-        
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            
-        }
-
-        @media (max-width: 767px) {
-            .body {
-                background-image: url('skly_1.jpg');
-            }
-        }
-
-        header {
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0); 
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            z-index: 1000;
-            position: fixed;
-        }
-
-        header img {
-            height: 50px;
-            padding: 10px 20px ;
-        }
-
-        .hamburger {
-            display: none;
-            cursor: pointer;
-        }
-
-        .bar {
-            width: 20px;
-            height: 2px;
-            background-color: #333;
-            margin: 6px auto;
-            transition: transform 0.3s ease, opacity 0.3s ease;
-        }
-
-        .hamburger.active .bar:nth-child(1) {
-            transform: translateY(8px) rotate(45deg);
-        }
-
-        .hamburger.active .bar:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active .bar:nth-child(3) {
-            transform: translateY(-8px) rotate(-45deg);
-        }
-
-        @media (max-width: 767px) {
-            header img{
-                padding: 5px 6px;
-            }
-            .hamburger {
-                display: block;
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                z-index: 1001;
-            }
-
-            nav {
-                position: fixed;
-                top: 60px;
-                left: 0;
-                background: rgba(255, 255, 255, 0.9);
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                width: 100%;
-                max-height: calc(100vh - 80px);
-                overflow-y: auto;
-                transition: transform 0.3s ease;
-                transform: translateX(-100%);
-                z-index: 1000;
-            }
-
-            nav.active {
-                transform: translateX(0);
-            }
-
-            nav ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
-
-            nav ul li {
-                margin: 10px 0;
-            }
-
-            nav ul li a {
-                display: block;
-                padding: 15px 20px;
-                color: #1b1a1a;
-                font-weight: bold;
-                text-decoration: none;
-                transition: background-color 0.3s ease, color 0.3s ease;
-                border-bottom: 1px solid #ccc;
-            }
-
-            nav ul li a:hover {
-                background-color: #f0f0f0;
-                color: #98851f;
-            }
-        }
-
-        @media (min-width: 768px) {
-            .hamburger {
-                display: none;
-            }
-
-            nav {
-                position: fixed;
-                top: 0;
-                left: 0;
-                background: rgba(255, 255, 255, 0);
-                display: flex;
-                justify-content: flex-end;
-                padding: 25px 0px;
-                z-index: 1000;
-                width: 100%;
-            }
-
-            nav ul {
-                display: flex;
-                list-style: none;
-                margin: 0;
-                padding: 0;
-            }
-
-            nav ul li {
-                margin-left: 20px;
-            }
-
-            nav ul li a {
-                color: #333;
-                font-weight: bold;
-                text-decoration: none;
-                transition: color 0.3s ease;
-                padding: 10px 15px;
-            }
-
-            nav ul li a:hover {
-                color: #98851f;
-            }
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 40px;
-        }
-
-        .search-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 30px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .search-container select,
-        .search-container input {
-            padding: 15px;
-            border: none;
-            border-radius: 5px 0px 0px 5px;
-            outline: none;
-            font-size: 1rem;
-        }
-
-        #loc {
-    width: 18%;
-    padding: 15px;
-    border: none;
-    border-radius: 5px 0px 0px 5px;
-    outline: none;
-    font-size: 1rem;
-    border-right: none; /* Remove the right border */
-    border-right: #595959 solid;
-}
-
-#service {
-    width: 45%;
-    padding: 15px;
-    border: none;
-    border-radius: 0px 5px 5px 0px;
-    outline: none;
-    font-size: 1rem;
-    margin-left: -1px; /* Adjust the left margin */
-}
-
-
-        .search-icon {
-            display: flex;
-            align-items: center;
-            background: #98851f;
-            color: white;
-            border: none;
-            border-radius: 0 5px 5px 0;
-            padding: 15px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .search-icon:hover {
-            background: #4c420f;
-        }
-
-/* Modal styles */
-.modal {
-    display: none;
-    visibility: hidden;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-.modal-content {
-    background-color: #fff;
-    margin: auto;
-    padding: 0;  
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 350px;
-    position: relative;
-    border-radius: 10px;
-    
-}
-
-.close {
-    color: #000000;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.main {
-    width: 350px;
-    height: 500px;
-    overflow: hidden;
-    background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
-    border-radius: 10px;
-    
-}
-
-
-
-.signup {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-label {
-    color: #272726;
-    font-size: 2.3em;
-    justify-content: center;
-    display: flex;
-    margin: 50px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: .5s ease-in-out;
-}
-
-#inp {
-    width: 60%;
-    height: 10px;
-    background: #e0dede;
-    justify-content: center;
-    display: flex;
-    margin: 20px auto;
-    padding: 12px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-}
-
-#lg {
-    width: 60%;
-    height: 40px;
-    margin: 10px auto;
-    justify-content: center;
-    display: block;
-    color: #fff;
-    background: #655914;
-    font-size: 1em;
-    font-weight: bold;
-    margin-top: 30px;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    transition: .2s ease-in;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #322c0a;
-}
-
-.login {
-    height: 460px;
-    background: #eee;
-    border-radius: 60% / 10%;
-    transform: translateY(-180px);
-    transition: .8s ease-in-out;
-}
-
-.login label {
-    color: #272726;
-    transform: scale(.6);
-}
-
-#chk{
-	display: none;
-}
-
-#chk:checked ~ .login {
-    transform: translateY(-500px);
-}
-
-#chk:checked ~ .login label {
-    transform: scale(1);
-}
-
-#chk:checked ~ .signup label {
-    transform: scale(.6);
-}
-
-.table {
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    margin: 0 auto;
-  
-}
-
-.table img {
-    width: 100%;
-    height: auto;
-    background: rgba(0, 0, 0, 0.4);
-}
-
-/* Hide mobile image by default */
-.table .mobile-image {
-    display: none;
-}
-
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-    .table .desktop-image {
-        display: none; /* Hide desktop image on smaller screens */
-    }
-    .table{
-        width: 100%;
-    }
-    .table .mobile-image {
-        width: 100%;
-        display: block; /* Show mobile image on smaller screens */
-    }
-}
 
     </style>
 </head>
 <body>
 <header>
     <a href="#">
-        <img src="loogo.png" alt="Skly Logo">
+        <img src="../designs/logo/loogo.png" alt="Skly Logo" class="img1">
     </a>
     <div class="hamburger">
         <div class="bar"></div>
@@ -554,7 +30,7 @@ button:hover {
     </div>
     <nav>
         <ul>
-            <li><a href="#">Join Us</a></li>
+            <li><a href="#">Wizard Space</a></li>
             <li><a href="#">Why Invest?</a></li>
             <li><a href="#" id="loginSignupLink">Login / Signup</a></li>
 
@@ -564,8 +40,8 @@ button:hover {
 <section class="hero">
     <div class="container">
         <br>
-        <h1>Find Skilled Professionals nearby <br> <span style="font-family : Playwrite MX, cursive;">Skly it!</span></h1>
-        <p>Discover Local Help for  Electrical, Plumbing, Furniture, Cleaning, Appliances, Carpentry, Gardens, Tailoring & More!</p>
+        <h1>Find Skilled Professionals nearby <br> <span style="font-family : Playwrite MX, cursive;" id="sklyit">Skly it!</span></h1>
+        <p>Discover Local Help for  Electrical, Plumbing, Furniture repair, Cleaning, Appliances repair, Carpentry, Gardens, Tailoring & More!</p>
         <div class="search-container">
             <input type="text" placeholder="location" id="loc">
             <input type="text" placeholder="Search for services..." id="service">
@@ -600,50 +76,86 @@ button:hover {
         </div>
     </div>
 </div>
+
+
 </section>
-<div class="table">
-   <img src="services.png" alt="" class="desktop-image">
-   <img src="mobserv.png" alt="" class="mobile-image">
+<div class="servies">
+    <section class="secser">
+        <div class="row">
+          <h2 class="section-heading">Get Things Done with Skly</h2>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                <i class="fas fa-hammer"></i>
+              </div>
+              <h3>53+ Services & Counting</h3>
+              <p>
+                Find everything you need, from electricians and plumbers to yoga instructors and fitness trainers.
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                <i class="fas fa-users-cog"></i>
+              </div>
+              <h3>24/7 Customer Support</h3>
+              <p>
+                We're here for you, anytime, any day.
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                <i class="fas fa-vote-yea"></i>
+              </div>
+              <h3>Simple & Hassle-Free Booking</h3>
+              <p>
+                Find, book, and relax - all on Skly. No need for multiple calls or appointments.
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                <i class="fas fa-truck-pickup"></i>
+              </div>
+              <h3> Affordable & Reliable Services</h3>
+              <p>
+                Competitive rates and background-checked professionals ensure you get the best value.
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                <i class="fas fa-credit-card"></i>
+              </div>
+              <h3>Get Matched Instantly, Pay Securely</h3>
+              <p>
+                Skly connects you with pre-vetted professionals in seconds. Book with confidence using our secure payment gateway, all within the Skly app.
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                <i class="fas fa-hands-helping"></i>
+              </div>
+              <h3>Support Local Businesses & Skilled Individuals</h3>
+              <p>
+                Empower your community by choosing local talent you can trust.
+              </p>
+            </div>
+          </div>
+        </div>
+   
+      </section>
 </div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('nav');
-    const loginSignupLink = document.getElementById('loginSignupLink');
-    const modal = document.getElementById('loginSignupModal');
-    const closeBtn = document.querySelector('.close');
+<script src="script.js"></script>
 
-    hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle('active');
-        nav.classList.toggle('active');
-    });
-
-    document.addEventListener('click', function(e) {
-        if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
-            hamburger.classList.remove('active');
-            nav.classList.remove('active');
-        }
-    });
-
-    loginSignupLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        modal.style.display = 'flex';
-        modal.style.visibility = 'visible';
-    });
-
-    closeBtn.addEventListener('click', function() {
-        modal.style.display = 'none';
-        modal.style.visibility = 'hidden';
-    });
-
-    window.addEventListener('click', function(event) {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-            modal.style.visibility = 'hidden';
-        }
-    });
-});
-
-</script>
 </body>
 </html>
