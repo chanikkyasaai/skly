@@ -1,0 +1,250 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#calendar {
+  width: 100%; /* Adjust to full width on mobile */
+  max-width: 400px; /* Maintain max width for larger screens */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  margin: 20px auto; /* Center the calendar horizontally */
+  padding: 20px;
+}
+
+#calendar-header {
+  display: flex;
+  align-items: center;
+  padding: 20px 30px 10px; /* Adjust padding as needed */
+  justify-content: space-between;
+}
+
+#calendar-header .icons {
+  display: flex;
+}
+
+#calendar-header .icons span {
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 50%;
+}
+
+#calendar-header .icons span:hover {
+  background: #f2f2f2;
+}
+
+#calendar-header .current-date {
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.calendar {
+  padding: 20px;
+}
+
+.calendar ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.calendar .weeks {
+  margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+.calendar li {
+  color: #333;
+  width: calc(100% / 7); /* Ensure each day takes up 1/7th of the calendar width */
+  font-size: 1.07rem;
+  box-sizing: border-box; /* Include padding and border in the element's width and height */
+}
+
+.calendar .weeks li {
+  font-weight: 500;
+  cursor: default;
+}
+
+.calendar .days li {
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 20px; /* Adjust margin as needed */
+  height: 40px; /* Fixed height for each day */
+  line-height: 40px; /* Center text vertically */
+}
+
+.days li.inactive {
+  color: #aaa;
+}
+
+.days li.active {
+  color: #fff;
+}
+
+.days li::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.days li.active::before {
+  background: #9B59B6;
+}
+
+.days li:not(.active):hover::before {
+  background: #f2f2f2;
+}
+
+@media (max-width: 600px) {
+  #calendar {
+    position: static; /* Remove absolute positioning */
+    margin: 50px auto; /* Center the calendar horizontally with some space at the top and bottom */
+  }
+}
+
+
+/* General layout for calendar and fix-it board */
+#task {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  height: 100vh; /* Ensure the entire section fits within the viewport */
+  overflow: hidden;
+  width: 100%; /* Ensure it fits within the screen width */
+}
+
+#calendar {
+  flex: 1;
+}
+
+#fix-it-board {
+  flex: 1;
+  background-size: cover;
+  padding: 20px;
+  padding-top: 0%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  max-height: 100%; /* Ensure the height is constrained */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+
+
+.task {
+  background: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.task:hover {
+  transform: scale(1.05);
+}
+
+.task-details-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-details-group p {
+  margin: 0;
+}
+
+.task-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Reduced gap between buttons */
+  align-items: flex-start;
+  justify-self: end; /* Align buttons to the end of the task div */
+}
+
+.task button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-btn {
+  background: radial-gradient(939px at 94.7% 50%, rgb(0, 178, 169) 0%, rgb(0, 106, 101) 76.9%);
+  color: white;
+}
+
+.cancel-btn {
+  background: linear-gradient(to right, rgb(255, 65, 108), rgb(255, 75, 43));
+  color: white;
+}
+
+/* Responsive layout for mobile devices */
+@media (max-width: 767px) {
+  #task {
+    flex-direction: column;
+    height:max-content;
+  }
+
+  .task-details-group {
+    width: 100%; 
+  }
+
+  .task {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px; /* Add margin between tasks */
+  }
+
+  .task-details {
+    display: flex;
+    flex-direction: row; /* Display task details in a row */
+    gap: 10px; /* Adjust spacing between details */
+    align-items: center; /* Center items vertically */
+  }
+
+  
+
+  .task-buttons button {
+    width: 100%; /* Adjust button width as needed */
+  }
+}
+
+.fixittext {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1;
+  padding: 20px 20px;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0;
+}

@@ -1,0 +1,448 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.slide-container {
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+}
+.slide-content {
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+.swiper-navBtn {
+    color: #4a4a4a;
+    transition: color 0.3s ease;
+    display: block; /* Ensure they are displayed */
+}
+.swiper-navBtn:hover {
+    color: #212121;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+    font-size: 35px;
+}
+.swiper-button-next {
+    right: 10px;
+}
+.swiper-button-prev {
+    left: 10px;
+}
+.swiper-pagination-bullet {
+    background-color: #4a4a4a;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    background-color: #212121;
+}
+@media screen and (max-width: 768px) {
+    .slide-content {
+        margin: 0 10px;
+    }
+}
+.booking {
+    position: relative;
+    background-color: #296972;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 20px;
+    overflow: hidden;
+    width: 91%;
+    color: #fff;
+    transition: background-color 0.5s, color 0.5s;
+    border-radius: 30px;
+}
+.booking h6 {
+    opacity: 0.6;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.booking h2 {
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+.booking-preview {
+    background-color: #296972;
+    color: #fff;
+    padding: 30px;
+    max-width: 450px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.booking-preview a {
+    color: #ffffff;
+    display: inline-block;
+    font-size: 12px;
+    opacity: 0.6;
+    margin-top: 30px;
+    text-decoration: none;
+}
+.booking-info {
+    background-color: aliceblue;
+    position: relative;
+    padding: 30px;
+    width: 100%;
+    display: none;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+.btn {
+    background-color: #296972;
+    border: 0;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+.booking-details-visible .booking-preview {
+    display: none;
+}
+.booking-details-visible .booking-info {
+    display: block;
+    animation: slideIn 0.5s ease-in-out;
+}
+.booking-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+.close-button {
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.close-button:focus {
+    outline: none;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.rating-section {
+margin-top: 20px;
+text-align: center;
+}
+
+.rating-options {
+margin-top: 10px;
+}
+
+.rating-option {
+font-size: 30px;
+cursor: pointer;
+margin: 0 10px;
+}
+
+.save-btn {
+margin-top: 10px;
+font-size: 14px;
+background-color: #296972;
+border: none;
+color: #fff;
+cursor: pointer;
+transition: background-color 0.3s ease;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+padding: 10px 15px;
+border-radius: 20px;
+}
+
+.save-btn:hover {
+background-color: #1a4541;
+}
+
+.save-btn .fas {
+font-size: 18px;
+margin-right: 5px;
+}
+
+.review-box {
+margin-top: 10px;
+margin-bottom: 20px;
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+resize: vertical;
+min-height: 50px; /* Adjust as needed */
+}
+
+.profile-section {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.profile-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.profile-photo {
+display: flex;
+flex-direction: column;
+align-items: center; /* Center align the elements horizontally */
+margin-bottom: 20px;
+}
+
+.profile-photo img {
+border-radius: 50%;
+width: 100px;
+height: 100px;
+object-fit: cover;
+margin-bottom: 10px; /* Add margin to separate image from the button */
+}
+
+.profile-photo button, .save-photo-btn {
+padding: 10px 20px;
+background-color: #296972;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+margin-top: 10px; /* Add margin to separate the buttons */
+}
+
+.profile-photo button:hover, .save-photo-btn:hover {
+background-color: #1a4541;
+}
+
+.save-photo-btn {
+display: none; /* Keep the save button hidden initially */
+}
+
+.profile-photo button:hover, .save-photo-btn:hover {
+    background-color: #1a4541;
+}
+
+.account-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.account-details div {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.account-details label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.account-details input, .account-details textarea {
+    padding: 8px; /* Reduce the padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px; /* Reduce the margin-bottom */
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.account-details input:focus, .account-details textarea:focus {
+    border-color: #296972;
+    box-shadow: 0 0 5px rgba(41, 105, 114, 0.5);
+    outline: none;
+}
+
+.edit-btn, .save-btn, .add-phone-btn, .add-email-btn, .add-location-btn, .add-availability-btn {
+    padding: 10px 20px;
+    background-color: #296972;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px; /* Reduce the margin-top */
+}
+
+.edit-btn:hover, .save-btn:hover, .add-phone-btn:hover, .add-email-btn:hover, .add-location-btn:hover, .add-availability-btn:hover {
+    background-color: #1a4541;
+}
+
+.edit-btn .fas, .save-btn .fas, .add-phone-btn .fas, .add-email-btn .fas, .add-location-btn .fas, .add-availability-btn .fas {
+    margin-right: 5px;
+}
+
+.close-profile-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+padding: 10px 20px;
+background-color: #d9534f;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+margin-top: 20px;
+display: inline-flex;
+align-items: center;
+}
+
+.cancel-btn:hover {
+background-color: #c9302c;
+}
+
+.cancel-btn .fas {
+margin-right: 5px;
+}
+
+.new-input {
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+margin-bottom: 10px;
+font-size: 14px;
+transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.new-input:focus {
+border-color: #296972;
+box-shadow: 0 0 5px rgba(41, 105, 114, 0.5);
+outline: none;
+}
+
+
+@media (max-width: 768px) {
+    .account-details div {
+        flex: 1 1 100%;
+    }
+}
+
+
+.notifications-popup {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+z-index: 1000; /* Ensure it's on top of other content */
+justify-content: center;
+align-items: center;
+}
+
+.notifications-content {
+background-color: #fff;
+border: 1px solid #ccc;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Increased shadow for depth */
+padding: 30px; /* Increased padding for spacing */
+max-width: 90%; /* Adjusted for larger width */
+max-height: 90%; /* Adjusted for larger height */
+overflow-y: auto;
+position: relative; /* Ensure relative positioning for absolute close button */
+}
+
+.notifications-header {
+font-size: 28px; /* Larger font size for header */
+font-weight: bold;
+margin-bottom: 15px; /* Increased margin bottom for spacing */
+}
+
+.notifications-list {
+max-height: calc(100% - 100px); /* Adjusted based on header and padding */
+overflow-y: auto;
+}
+
+.notification-item {
+margin-bottom: 15px; /* Increased margin bottom for spacing */
+padding: 15px; /* Increased padding for spacing */
+border: 1px solid #eee;
+}
+
+.notification-message {
+font-size: 18px; /* Larger font size for message */
+margin-bottom: 10px; /* Increased margin bottom for spacing */
+}
+
+.notification-timestamp {
+font-size: 14px; /* Larger font size for timestamp */
+color: #999;
+}
+
+
+.close-btn {
+position: absolute;
+top: 10px; /* Adjust top position based on your design */
+right: 10px; /* Adjust right position based on your design */
+background-color: transparent;
+border: none;
+color: #222222;
+font-size: 24px;
+cursor: pointer;
+z-index: 1001; /* Ensure it's above notifications content */
+}
+
+.close-btn:hover {
+color: #666;
+}
+
+.notification-count {
+background-color: #296972; /* Red color for notification count */
+color: #fff;
+font-size: 12px;
+padding: 3px 6px;
+border-radius: 50%; /* Make it a perfect circle */
+vertical-align: super; /* Aligns the sup tag vertically */
+margin-left: 5px; /* Adjust as needed */
+display: inline-block; /* Ensure it respects the border-radius */
+line-height: 1; /* Ensures the circle is perfectly round */
+}
+
+
+

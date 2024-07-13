@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skly - Hyperlocal Skills Marketplace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+MX:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="comstyles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="wizard.css">
+    <style>
+      
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#">
+            <img src="../designs/logo/loogo.png" alt="Skly Logo" class="img1">
+        </a>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+                <ul>
+                    <li><a href="#" id="username">Hi! Chanikya</a></li>
+                    <li><a href="#new-bookings-section" id="newbooks">New Bookings</a></li>
+                    <li><a href="#" id="chat">Chat Space</a></li>
+                    <li><a href="#" id="payments">Payments</a></li>
+
+                    <li>
+                        <a href="#" id="notifications-link">
+                            Notifications
+                            <sup class="notification-count">5</sup> <!-- Example notification count -->
+                        </a>
+                    </li>
+
+                    <li><a href="#" id="profile-link">Profile <img src="propic.jpg" alt="User Image" id="profile-photo"
+                                class="user-image"></a></li>
+
+                </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <br>
+            <h1>Hello, WIZARD! <br> <span style="font-family : Playwrite MX, cursive;" id="sklyit">Skly it!</span></h1>
+            <p>Ready to make a difference? Join Skly and put your skills to work!</p>
+
+        </div>
+        <!-- Modal structure for login/signup form -->
+
+    
+    
+    </section>
+
+    <section class="notifications-popup" id="notifications-popup">
+        <div class="notifications-content">
+            <button class="close-btn" id="close-btn">&times;</button>
+            <div class="notifications-header">
+                Notifications
+            </div>
+            <div class="notifications-list">
+                <div class="notification-item">
+                    <div class="notification-message">
+                        You have a new message.
+                    </div>
+                    <div class="notification-timestamp">
+                        2024-06-27 10:30 AM
+                    </div>
+                </div>
+                <div class="notification-item">
+                    <div class="notification-message">
+                        Your booking is confirmed.
+                    </div>
+                    <div class="notification-timestamp">
+                        2024-06-26 02:15 PM
+                    </div>
+                </div>
+                <div class="notification-item">
+                    <div class="notification-message">
+                        Reminder: Event tomorrow!
+                    </div>
+                    <div class="notification-timestamp">
+                        2024-06-25 09:00 AM
+                    </div>
+                </div>
+                <div class="notification-item">
+                    <div class="notification-message">
+                        Reminder: Event tomorrow!
+                    </div>
+                    <div class="notification-timestamp">
+                        2024-06-25 09:00 AM
+                    </div>
+                </div>
+                <div class="notification-item">
+                    <div class="notification-message">
+                        Reminder: Event tomorrow!
+                    </div>
+                    <div class="notification-timestamp">
+                        2024-06-25 09:00 AM
+                    </div>
+                </div>
+                <div class="notification-item">
+                    <div class="notification-message">
+                        Reminder: Event tomorrow!
+                    </div>
+                    <div class="notification-timestamp">
+                        2024-06-25 09:00 AM
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="main-container">
+    <section id="task">
+    <section id="calendar">
+        <div id="calendar-header">
+            <p class="current-date"></p>
+            <div class="icons">
+                <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                <span id="next" class="material-symbols-rounded">chevron_right</span>
+            </div>
+        </div>
+        <div class="calendar">
+            <ul class="weeks">
+                <li>Sun</li>
+                <li>Mon</li>
+                <li>Tue</li>
+                <li>Wed</li>
+                <li>Thu</li>
+                <li>Fri</li>
+                <li>Sat</li>
+            </ul>
+            <ul class="days"></ul>
+        </div>
+    </section>
+    <section id="fix-it-board">
+        <h2 class="fixittext">Fix-It  (Today)</h2>
+        <br>
+        <div class="task">
+            <div class="task-details-group">
+                <p>Sky-ID: 12345</p>
+                <p>Task: Electrical</p>
+                <p>Service: Electric wiring</p>
+                <p>Charges: $100</p>
+                
+            </div>
+            <div class="task-details-group">
+                <p>Location: house no4, jothi nagar, chitlapakkam chennnai-64 infront of policestaion s12</p>
+                <p>Date: 2024-07-01</p>
+                <p>Time: 10:00 AM</p>
+                
+            </div>
+            <div class="task-buttons">
+                <button class="contact-btn">Contact</button>
+                <button class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+
+        <div class="task">
+            <div class="task-details-group">
+                <p>Sky-ID: 12345</p>
+                <p>Task: Electrical</p>
+                <p>Service: Electric wiring</p>
+                <p>Charges: $100</p>
+                
+            </div>
+            <div class="task-details-group">
+                <p>Location: Location A</p>
+                <p>Date: 2024-07-01</p>
+                <p>Time: 10:00 AM</p>
+                
+            </div>
+            <div class="task-buttons">
+                <button class="contact-btn">Contact</button>
+                <button class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+        <div class="task">
+            <div class="task-details-group">
+                <p>Sky-ID: 12345</p>
+                <p>Task: Electrical</p>
+                <p>Service: Electric wiring</p>
+                <p>Charges: $100</p>
+                
+            </div>
+            <div class="task-details-group">
+                <p>Location: Location A</p>
+                <p>Date: 2024-07-01</p>
+                <p>Time: 10:00 AM</p>
+                
+            </div>
+            <div class="task-buttons">
+                <button class="contact-btn">Contact</button>
+                <button class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+
+        <div class="task">
+            <div class="task-details-group">
+                <p>Sky-ID: 12345</p>
+                <p>Task: Electrical</p>
+                <p>Service: Electric wiring</p>
+                <p>Charges: $100</p>
+                
+            </div>
+            <div class="task-details-group">
+                <p>Location: Location A</p>
+                <p>Date: 2024-07-01</p>
+                <p>Time: 10:00 AM</p>
+                
+            </div>
+            <div class="task-buttons">
+                <button class="contact-btn">Contact</button>
+                <button class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+
+                <div class="task">
+            <div class="task-details-group">
+                <p>Sky-ID: 12345</p>
+                <p>Task: Electrical</p>
+                <p>Service: Electric wiring</p>
+                <p>Charges: $100</p>
+                
+            </div>
+            <div class="task-details-group">
+                <p>Location: Location A</p>
+                <p>Date: 2024-07-01</p>
+                <p>Time: 10:00 AM</p>
+                
+            </div>
+            <div class="task-buttons">
+                <button class="contact-btn">Contact</button>
+                <button class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+        <!-- Add more tasks as needed -->
+    </section>
+    
+</section>
+
+   
+<section id="new-bookings-section">
+    <div class="my-bookings" id="my-bookings" >
+    <h2>New Booking Requests</h2> 
+        <div class="slide-container swiper">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="booking">
+                    <div class="booking-preview">
+                        <h6>Booking ID: SWI12346</h6><br>
+                        <img src="problem.webp" alt="Problem description image" class="booking-image">
+                        <h2>Plumbing</h2>
+                        <p style="color: #fff;">Services : Current wiring</a></p>
+                        <p style="color: #fff;">Service Location: 1234 Elm Street, Springfield</p>
+                        <p style="color: #fff;">Date and Time: July 22, 2023, 11:00 AM</p>
+                        <a href="#" class="view-details">Update Status <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="booking-info">
+                        <button class="close-button">&times;</button>
+
+                        <button class="btn">Accept</button>
+                        <br><br>
+                        <button class="btn">Reject</button>
+                        <br> <br>
+                        <button class="btn">Contact customer</button>
+                        <br><br>
+                        <button class="btn">Get Help</button>
+                    </div>
+                </div>
+            </div>
+
+                <div class="swiper-slide">
+                    <div class="booking">
+                        <div class="booking-preview">
+                            <h6>Booking ID: SWI12346</h6><br>
+                            <img src="problem.webp" alt="Problem description image" class="booking-image">
+                            <h2>Plumbing</h2>
+                            <p style="color: #fff;">Services : Current wiring</a></p>
+                            <p style="color: #fff;">Service Location: 1234 Elm Street, Springfield</p>
+                            <p style="color: #fff;">Date and Time: July 22, 2023, 11:00 AM</p>
+                            <a href="#" class="view-details">Update Status <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                        <div class="booking-info">
+                            <button class="close-button">&times;</button>
+    
+                            <button class="btn">Accept</button>
+                            <br><br>
+                            <button class="btn">Reject</button>
+                            <br> <br>
+                            <button class="btn">Contact customer</button>
+                            <br><br>
+                            <button class="btn">Get Help</button>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="booking">
+                    <div class="booking-preview">
+                        <h6>Booking ID: SWI12346</h6><br>
+                        <img src="problem.webp" alt="Problem description image" class="booking-image">
+                        <h2>Plumbing</h2>
+                        <p style="color: #fff;">Services : Current wiring</a></p>
+                        <p style="color: #fff;">Service Location: 1234 Elm Street, Springfield</p>
+                        <p style="color: #fff;">Date and Time: July 22, 2023, 11:00 AM</p>
+                        <a href="#" class="view-details">Update Status <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="booking-info">
+                        <button class="close-button">&times;</button>
+
+                        <button class="btn">Accept</button>
+                        <br><br>
+                        <button class="btn">Reject</button>
+                        <br> <br>
+                        <button class="btn">Contact customer</button>
+                        <br><br>
+                        <button class="btn">Get Help</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="booking">
+                    <div class="booking-preview">
+                        <h6>Booking ID: SWI12346</h6><br>
+                        <img src="problem.webp" alt="Problem description image" class="booking-image">
+                        <h2>Plumbing</h2>
+                        <p style="color: #fff;">Services : Current wiring</a></p>
+                        <p style="color: #fff;">Service Location: 1234 Elm Street, Springfield</p>
+                        <p style="color: #fff;">Date and Time: July 22, 2023, 11:00 AM</p>
+                        <a href="#" class="view-details">Update Status<i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="booking-info">
+                        <button class="close-button">&times;</button>
+
+                        <button class="btn">Accept</button>
+                        <br><br>
+                        <button class="btn">Reject</button>
+                        <br> <br>
+                        <button class="btn">Contact customer</button>
+                        <br><br>
+                        <button class="btn">Get Help</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+</section>
+    
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="comjs.js"></script>
+    <script src="wizard.js"></script>
+    <script>
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skly - Hyperlocal Skills Marketplace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+MX:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="comstyles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+<header>
+    <a href="#">
+        <img src="../designs/logo/loogo.png" alt="Skly Logo" class="img1">
+    </a>
+    <div class="hamburger" id="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="#" id="username">Hi! Chanikya</a></li>
+            <li><a href="#" id="my-bookings-link">My Bookings</a></li>
+
+            <li>
+                <a href="#" id="notifications-link">
+                    Notifications 
+                    <sup class="notification-count">5</sup> <!-- Example notification count -->
+                </a>
+            </li>
+            
+            <li><a href="#" id="profile-link">Profile <img src="propic.jpg" alt="User Image" id="profile-photo" class="user-image"></a></li>
+
+        </ul>
+    </nav>
+</header>
+
+<section class="notifications-popup" id="notifications-popup">
+    <div class="notifications-content">
+        <button class="close-btn" id="close-btn">&times;</button>
+        <div class="notifications-header">
+            Notifications
+        </div>
+        <div class="notifications-list">
+            <div class="notification-item">
+                <div class="notification-message">
+                    You have a new message. 
+                </div>
+                <div class="notification-timestamp">
+                    2024-06-27 10:30 AM
+                </div>
+            </div>
+            <div class="notification-item">
+                <div class="notification-message">
+                    Your booking is confirmed.
+                </div>
+                <div class="notification-timestamp">
+                    2024-06-26 02:15 PM
+                </div>
+            </div>
+            <div class="notification-item">
+                <div class="notification-message">
+                    Reminder: Event tomorrow!
+                </div>
+                <div class="notification-timestamp">
+                    2024-06-25 09:00 AM
+                </div>
+            </div>
+            <div class="notification-item">
+                <div class="notification-message">
+                    Reminder: Event tomorrow!
+                </div>
+                <div class="notification-timestamp">
+                    2024-06-25 09:00 AM
+                </div>
+            </div>
+            <div class="notification-item">
+                <div class="notification-message">
+                    Reminder: Event tomorrow!
+                </div>
+                <div class="notification-timestamp">
+                    2024-06-25 09:00 AM
+                </div>
+            </div>
+            <div class="notification-item">
+                <div class="notification-message">
+                    Reminder: Event tomorrow!
+                </div>
+                <div class="notification-timestamp">
+                    2024-06-25 09:00 AM
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section class="hero">
+    <div class="container">
+      
+        <br>
+        <h1>Find Skilled Professionals nearby <br> <span style="font-family : Playwrite MX, cursive;" id="sklyit">Skly it!</span></h1>
+        <p>Discover Local Help for Electrical, Plumbing, Furniture repair, Cleaning, Appliances repair, Carpentry, Gardens, Tailoring & More!</p>
+        <div class="search-container">
+            <input type="text" placeholder="location" id="loc">
+            <input type="text" placeholder="Search for services..." id="service">
+            <button class="search-icon"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+</section>
+<section class="profile-section" id="profile-section">
+    <div class="profile-content">
+        <button class="close-profile-btn" id="close-profile-btn">&times;</button>
+        <div class="profile-photo">
+            <img src="propic.jpg" alt="Profile Photo" id="profile-photo">
+            <button id="upload-photo-btn">Upload a new picture</button>
+            <input type="file" id="photo-input" style="display: none;">
+            <button id="save-photo-btn" class="save-photo-btn" style="display: none;">Save</button>
+        </div>
+        <form class="account-details" id="account-details-form">
+            <div>
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" value="Chanikya" disabled>
+            </div>
+            <div>
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" value="Doe" disabled>
+            </div>
+            <div>
+                <label for="birthdate">Birthdate</label>
+                <input type="date" id="birthdate" name="birthdate" value="1990-01-01" disabled>
+            </div>
+            <div>
+                <label for="phone-number">Phone Number</label>
+                <input type="tel" id="phone-number" name="phone-number" value="123-456-7890" disabled>
+                <button type="button" class="add-phone-btn" id="add-phone-btn" style="display: none;"><i class="fas fa-plus"></i></button>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="chanikya@example.com" disabled>
+                <button type="button" class="add-email-btn" id="add-email-btn" style="display: none;"><i class="fas fa-plus"></i></button>
+            </div>
+            <div>
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" value="123 Elm St, Downtown, Springfield, 12345" disabled>
+                <button type="button" class="add-location-btn" id="add-location-btn" style="display: none;"><i class="fas fa-plus"></i></button>
+            </div>
+
+            <button type="button" class="edit-btn" id="edit-btn"><i class="fas fa-edit"></i> Edit</button>
+            <button type="button" class="save-btn" id="save-btn" style="display: none;"><i class="fas fa-save"></i> Save</button>
+            <button type="button" class="cancel-btn" id="cancel-btn" style="display: none;"><i class="fas fa-times"></i> Cancel</button>
+         </form>
+    </div>
+</section>
+<section>
+  <div class="my-bookings" id="my-bookings" style="display: none;">
+    <h2>MY BOOKINGS</h2> 
+      <div class="slide-container swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="booking">
+                    <div class="booking-preview">
+                        <h6>Booking ID: SWI12346</h6><br>
+                        <img src="problem.webp" alt="Problem description image" class="booking-image">
+                        <h2>Plumbing</h2>
+                        <p style="color: #fff;">Wizard Chosen: <a href="#">Jane Smith</a></p>
+                        <p style="color: #fff;">Status: COMPLETED</p>
+                        <p style="color: #fff;">Date and Time: July 22, 2023, 11:00 AM</p>
+                        <a href="#" class="view-details">View booking details <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="booking-info">
+                        <button class="close-button">&times;</button>
+                        <p>Service Location: 1234 Elm Street, Springfield</p>
+                        <p>Services : Current wiring</p>
+                        <p>Charges: $20</p>
+                        <div class="rating-section">
+                          <p>Rate your experience:</p>
+                          <div class="rating-options">
+                              <span class="rating-option" data-value="1">😞</span>
+                              <span class="rating-option" data-value="2">😐</span>
+                              <span class="rating-option" data-value="3">😊</span>
+                          </div>
+                          <!-- Review box -->
+                          <textarea class="review-box" placeholder="Add your review..."></textarea>
+
+                          <button class="save-btn">
+                              <i class="fas fa-save"> SAVE </i>
+                          </button>
+                          <br><br>
+                      </div>
+                       
+                        <button class="btn">Get Help</button>
+                    </div>
+                </div>
+            </div>
+
+              <div class="swiper-slide">
+                <div class="booking">
+                    <div class="booking-preview">
+                        <h6>Booking ID: SWI12346</h6><br>
+                        <img src="problem.webp" alt="Problem description image" class="booking-image">
+                        <h2>Plumbing</h2>
+                        <p style="color: #fff;">Wizard Chosen: <a href="#">Jane Smith</a></p>
+                        <p style="color: #fff;">Status: COMPLETED</p>
+                        <p style="color: #fff;">Date and Time: July 22, 2023, 11:00 AM</p>
+                        <a href="#" class="view-details">View booking details <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="booking-info">
+                        <button class="close-button">&times;</button>
+                        <p>Service Location: 1234 Elm Street, Springfield</p>
+                        <p>Services : Current wiring</p>
+                        <p>Charges: $20</p>
+                        <div class="rating-section">
+                          <p>Rate your experience:</p>
+                          <div class="rating-options">
+                              <span class="rating-option" data-value="1">😞</span>
+                              <span class="rating-option" data-value="2">😐</span>
+                              <span class="rating-option" data-value="3">😊</span>
+                          </div>
+                          <!-- Review box -->
+                          <textarea class="review-box" placeholder="Add your review..."></textarea>
+
+                          <button class="save-btn">
+                              <i class="fas fa-save"> SAVE </i>
+                          </button>
+                          <br><br>
+                      </div>
+                       
+                        <button class="btn">Get Help</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="booking">
+                    <div class="booking-preview">
+                        <h6>Booking ID: SWI12346</h6><br>
+                        <img src="problem.webp" alt="Problem description image" class="booking-image">
+                        <h2>Plumbing</h2>
+                        <p style="color: #fff;">Wizard Chosen: <a href="#">Jane Smith</a></p>
+                        <p style="color: #fff;">Status: COMPLETED</p>
+                        <p style="color: #fff;">Date and Time: July 22, 2023, 11:00 AM</p>
+                        <a href="#" class="view-details">View booking details <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="booking-info">
+                        <button class="close-button">&times;</button>
+                        <p>Service Location: 1234 Elm Street, Springfield</p>
+                        <p>Services : Current wiring</p>
+                        <p>Charges: $20</p>
+                        <div class="rating-section">
+                          <p>Rate your experience:</p>
+                          <div class="rating-options">
+                              <span class="rating-option" data-value="1">😞</span>
+                              <span class="rating-option" data-value="2">😐</span>
+                              <span class="rating-option" data-value="3">😊</span>
+                          </div>
+                          <!-- Review box -->
+                          <textarea class="review-box" placeholder="Add your review..."></textarea>
+
+                          <button class="save-btn">
+                              <i class="fas fa-save"> SAVE </i>
+                          </button>
+                          <br><br>
+                      </div>
+                       
+                        <button class="btn">Get Help</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="booking">
+                    <div class="booking-preview">
+                        <h6>Booking ID: SWI12346</h6><br>
+                        <img src="problem.webp" alt="Problem description image" class="booking-image">
+                        <h2>Plumbing</h2>
+                        <p style="color: #fff;">Wizard Chosen: <a href="#">Jane Smith</a></p>
+                        <p style="color: #fff;">Status: COMPLETED</p>
+                        <p style="color: #fff;">Date and Time: July 22, 2023, 11:00 AM</p>
+                        <a href="#" class="view-details">View booking details <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="booking-info">
+                        <button class="close-button">&times;</button>
+                        <p>Service Location: 1234 Elm Street, Springfield</p>
+                        <p>Services : Current wiring</p>
+                        <p>Charges: $20</p>
+                        <div class="rating-section">
+                          <p>Rate your experience:</p>
+                          <div class="rating-options">
+                              <span class="rating-option" data-value="1">😞</span>
+                              <span class="rating-option" data-value="2">😐</span>
+                              <span class="rating-option" data-value="3">😊</span>
+                          </div>
+                          <!-- Review box -->
+                          <textarea class="review-box" placeholder="Add your review..."></textarea>
+
+                          <button class="save-btn">
+                              <i class="fas fa-save"> SAVE </i>
+                          </button>
+                          <br><br>
+                      </div>
+                       
+                        <button class="btn">Get Help</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+      </div>
+  </div>
+</section>
+
+
+<div class="services">
+    <section class="secser">
+        <div class="row">
+            <h2 class="section-heading">Get Things Done with Skly</h2>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>53+ Services & Counting</h3>
+                    <p>
+                        Find everything you need, from electricians and plumbers to yoga instructors and fitness trainers.
+                    </p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3>24/7 Customer Support</h3>
+                    <p>
+                        We're here for you, anytime, any day.
+                    </p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-vote-yea"></i>
+                    </div>
+                    <h3>Simple & Hassle-Free Booking</h3>
+                    <p>
+                        Find, book, and relax - all on Skly. No need for multiple calls or appointments.
+                    </p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-truck-pickup"></i>
+                    </div>
+                    <h3>Affordable & Reliable Services</h3>
+                    <p>
+                        Competitive rates and background-checked professionals ensure you get the best value.
+                    </p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Get Matched Instantly, Pay Securely</h3>
+                    <p>
+                        Skly connects you with pre-vetted professionals in seconds. Book with confidence using our secure payment gateway, all within the Skly app.
+                    </p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Support Local Businesses & Skilled Individuals</h3>
+                    <p>
+                        Empower your community by choosing local talent you can trust.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+<script src="comjs.js"> </script>
+
+</body>
+</html>
